@@ -14,7 +14,7 @@ class AtomNeuron:
     def __init__(self, neuron_id, n_inputs=4, n_super_xor=4, storage_dir="synapses"):
         self.id = neuron_id
         self.n_in = n_inputs
-        self.n_xor = n_super_xor # Số chiều thực tại Siêu XOR (1 + N)
+        self.n_xor = n_super_xor
         self.storage_path = os.path.join(storage_dir, f"{self.id}.json")
         self.os_dir = storage_dir
         
@@ -25,7 +25,7 @@ class AtomNeuron:
         
         self.load_self()
 
-    # TỰ CHỮA LÀNH (SELF-HEALING)
+    # TỰ CHỮA LÀNH (SELF-HEALING ZERO-SPOF)
     def load_self(self):
         if os.path.exists(self.storage_path):
             try:
@@ -41,14 +41,11 @@ class AtomNeuron:
         self.bias = random.uniform(-0.5, 0.5)
         self.save_self()
 
-    # ==============================================================
-    # MA TRẬN 1 + N SIÊU XOR: KHÚC XẠ THỰC TẠI CHO TỪNG GIÁC QUAN
-    # ==============================================================
-    def super_xor_entangle(self, stimulus_vector, organ_id):
+    # MA TRẬN 1 + N SIÊU XOR KHÚC XẠ THỰC TẠI
+    def super_xor_entangle(self, stimulus_vector, context_id):
         masks = []
         for d in range(self.n_xor):
-            seed = f"{self.id}_{organ_id}_dim_{d}".encode()
-            # Dùng SHAKE-256 tạo mặt nạ lượng tử trực giao
+            seed = f"{self.id}_{context_id}_dim_{d}".encode()
             val = int(hashlib.shake_256(seed).hexdigest(4), 16) / 65535.0
             masks.append(round(val, 4))
 
@@ -68,11 +65,12 @@ class AtomNeuron:
         self.last_out = sigmoid(tong)
         return self.last_out
 
-    # LAN TRUYỀN NGƯỢC: Tự tiến hóa trọng số
+    # LAN TRUYỀN NGƯỢC: Tiến hóa và tự điều hòa Chân Không
     def backward(self, delta, lr=0.1):
         safe_delta = max(-5.0, min(5.0, delta))
         for i in range(self.n_in):
             self.weights[i] += lr * safe_delta * self.last_inputs[i]
+            self.weights[i] = round(self.weights[i] * 0.999, 4) # Hút về 0 chống bám chấp
         self.bias += lr * safe_delta
         self.save_self()
 
