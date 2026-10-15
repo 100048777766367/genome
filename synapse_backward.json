@@ -6,28 +6,28 @@
         "node_index": 2,
         "pulse_age": 1,
         "ancestor_root": "100048777766367/seed",
-        "generation_epoch": 10
+        "generation_epoch": 11
     },
-    "generation_epoch": 10,
-    "consensus_decision": 0.4779,
+    "generation_epoch": 11,
+    "consensus_decision": 0.4827,
     "command_pulse": [
-        0.4779,
-        0.5221
+        0.4827,
+        0.5173
     ],
     "features": [
-        0.4779,
-        0.5221
+        0.4827,
+        0.5173
     ],
     "gradients_for_ancestors": [
-        -0.0103,
-        -0.0012
+        -0.0096,
+        -0.0015
     ],
-    "absorbed_sample": "2016–17 LSU Tigers basketball team: The 2016–17 LSU Tigers basketball team represented Louisiana Sta",
+    "absorbed_sample": "Windbury Head: Windbury Head is the site of an Iron Age hill fort on the Hartland Peninsula, just no",
     "gossip_network": [
         "100048777766367/retina",
         "100048777766367/cochlea",
         "100048777766367/tactile",
         "100048777766367/olfactory"
     ],
-    "quantum_cid": "599a8ca189289b042366de5077e1bd31af884d3bd60aee493096824417faa09a60d9d4ca37a2a26066e3a75fd52f2333db10d0c68119626d6c3c6ad6298ac49e"
+    "quantum_cid": "746ab5c6158598178a5ef584c4204d34c0a44ac3869c1bc22dd2c945517d58c80ce709f98c9236dfc4c20eb2bec2e13e561328afc7d9b6315e0a12198ec1d206"
 }
