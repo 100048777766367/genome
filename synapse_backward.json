@@ -1,33 +1,33 @@
 {
     "contract": "bodhi.seed.v2",
     "node_dna": {
-        "identity": "100048777766367/seed-02",
+        "identity": "100048777766367/genome",
         "generation": "F1_PRODIGY",
         "node_index": 2,
         "pulse_age": 1,
         "ancestor_root": "100048777766367/seed",
-        "generation_epoch": 8
+        "generation_epoch": 9
     },
-    "generation_epoch": 8,
-    "consensus_decision": 0.4779,
+    "generation_epoch": 9,
+    "consensus_decision": 0.4741,
     "command_pulse": [
-        0.4779,
-        0.5221
+        0.4741,
+        0.5259
     ],
     "features": [
-        0.4779,
-        0.5221
+        0.4741,
+        0.5259
     ],
     "gradients_for_ancestors": [
-        -0.0109,
-        -0.0038
+        -0.01,
+        -0.0031
     ],
-    "absorbed_sample": "Villa Mairea: Villa Mairea is a villa, guest-house, and rural retreat designed and built by the Finn",
+    "absorbed_sample": "David Sandner: David Matthew Sandner is an author and editor of fantasy literature and a professor a",
     "gossip_network": [
         "100048777766367/retina",
         "100048777766367/cochlea",
         "100048777766367/tactile",
         "100048777766367/olfactory"
     ],
-    "quantum_cid": "2015e8df486bac20e8d1f58d4abb0ff3172e0bfacc6edea92edb2f24a37320edb695a92f7d1db7dedcce91ed7718ed39ab229ae9b04c074ab3a5214d891f544e"
+    "quantum_cid": "71305950c1d85b778d5cfd526d5b4698122e3418449269336c56f900a8f2b327900c552255ce002e210c9079353c0eec6eb68409d2a5a83f1cd9c40ea8e8b105"
 }
