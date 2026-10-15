@@ -2,8 +2,9 @@ import hashlib
 
 class LinguisticCell:
     """
-    CÂY CẦU NÂNG CHIỀU:
-    Biến chuỗi chữ viết từ Internet (Wikipedia / Markdown) -> Vector 4 chiều [0.0, 1.0]
+    CÂY CẦU NÂNG CHIỀU NẤC 2:
+    Biến chuỗi chữ viết từ Internet (Wikipedia / Markdown / JSON / Sách báo)
+    thành Vector ngữ nghĩa 4 chiều trong [0.0, 1.0] bằng bọt biển SHAKE-256
     """
     @staticmethod
     def embed_text(text):
