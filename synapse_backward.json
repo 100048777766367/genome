@@ -7,13 +7,13 @@
         "pulse_age": 1,
         "parent": "",
         "ancestor_root": "100048777766367/seed",
-        "generation_epoch": 27
+        "generation_epoch": 28
     },
-    "generation_epoch": 27,
-    "timestamp": 1792274365,
+    "generation_epoch": 28,
+    "timestamp": 1792293914,
     "gradients_for_eye": [
-        -0.0077,
-        -0.0026
+        -0.0075,
+        -0.0025
     ],
     "super_xor_masks": {
         "100048777766367/retina": [
@@ -47,5 +47,5 @@
         "100048777766367/tactile",
         "100048777766367/olfactory"
     ],
-    "quantum_cid": "986a1596f1711b1b2789b9276e9b2be38f946a5adfe08ec906a4de51d9bb438516aedb2b8d43da4e17226d48fdb4a9856e87bc5c647aefd96459d39c12a9b90c"
+    "quantum_cid": "34e884d75ed6b705a23803b18eb896a8c3ac10b944e32c51f33b3d639a26c6bda06cfd37f0b5d5d15e5eacc8a12ea218affeb29fcfb0e0a82e90457ba2c17c7b"
 }
